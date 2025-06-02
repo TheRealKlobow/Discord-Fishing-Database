@@ -10,7 +10,7 @@ Built for fishing communities who want structure and automation in their Discord
 
 ## 📸 How does it look
 
-![Bot Example](https://media.discordapp.net/attachments/1153025599707811984/1379166651051933866/image.png?format=webp&quality=lossless&width=444&height=399)
+![Bot Example](https://imgur.com/a/gFm5umW)
 ---
 
 ## 🔧 How to Use
