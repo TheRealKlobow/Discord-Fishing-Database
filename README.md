@@ -8,10 +8,10 @@
 A simple and clean Discord bot for registering fish catches during competitions or just for fun 🎉  
 Built for fishing communities who want structure and automation in their Discord server.
 
-## 📸 How does it look
+##📸 How does it look
 
 ![Bot Example](https://imgur.com/a/gFm5umW)
----
+
 
 ## 🔧 How to Use
 
