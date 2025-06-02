@@ -1,90 +1,108 @@
-Fish Catch Registration Discord Bot
-This Discord bot lets users easily register their fishing catches directly in your server using slash commands. It stores the data in a SQLite database and posts detailed catch info in dedicated fish-type channels.
+# 🎣 Fish Catch Registration Discord Bot
 
-🔧 How to use the system
+![Made by](https://img.shields.io/badge/Made%20by-Klobow-purple)
+![Status](https://img.shields.io/badge/Status-BETA-yellow)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+A simple and clean Discord bot for registering fish catches during competitions or just for fun 🎉  
+Built for fishing communities who want structure and automation in their Discord server.
+
+---
+
+## 🔧 How to Use
+
 Use the slash command:
 
+```
 /catch
+```
 
 You will be asked to provide:
 
-Type: The type of fish (see valid types below)
+- 🎣 **Type**: The type of fish (must match the valid list below)
+- ⚖️ **Kg**: Weight of the fish in kilograms
+- 📏 **Cm**: Length of the fish in centimeters
+- 🖼️ **Image**: Upload a photo of the catch
 
-Kg: The weight of the catch in kilograms
+> ⚠️ **Important:** Type must match exactly as listed below – otherwise, the command will not work!
 
-Cm: The length of the catch in centimeters
+---
 
-Image: You must attach a picture of the catch!
+## 🐟 Valid Fish Types
 
-🎣 Valid fish types
-Perch
+- Perch  
+- Pike  
+- Carp  
+- Zander  
+- Roach  
+- Tench  
+- Eel  
+- Other
 
-Pike
+---
 
-Carp
+## 💡 Features
 
-Zander
+✅ Stores catch data in a local **SQLite** database  
+✅ Posts a **formatted embed** with catch details and image to the correct fish-type channel (e.g. `#database-pike`)  
+✅ Updates bot status with **total registered catches**  
+✅ Gives users an instant **confirmation message**
 
-Roach
+---
 
-Tench
+## 🧰 Requirements
 
-Eel
+- Python 3.8+
+- `discord.py`
+- `aiosqlite`
+- A Discord server with the following channels:
+  - `#database-perch`
+  - `#database-pike`
+  - `#database-carp`
+  - `#database-zander`
+  - etc.
 
-Other
+---
 
-📝 Important
-Write the fish type exactly as listed above — otherwise, the command will not work!
+## 🚀 Setup
 
-Features
-Saves catch data (user, fish type, weight, length, image) in a SQLite database
+```bash
+# Clone the repository
+git clone https://github.com/TheRealklobow/Discord-Fishing-Database.git
+cd Discord-Fishing-Database
 
-Posts a formatted embed message with catch details and image in the appropriate fish channel (e.g. #database-pike)
-
-Updates bot status to show total number of registered catches
-
-Provides immediate confirmation to the user
-
-Requirements
-Python 3.8+
-
-discord.py library
-
-aiosqlite for database handling
-
-A Discord server with channels named like database-pike, database-carp, etc.
-
-Setup
-Clone the repository
-
-Install dependencies:
+# Install dependencies
 pip install discord.py aiosqlite
 
-Create the appropriate fish channels on your Discord server (e.g., database-pike)
+# Set your bot token as an environment variable
+export BOT_TOKEN=your_discord_bot_token
 
-Set your bot token as an environment variable BOT_TOKEN
+# Run the bot
+python bot.py
+```
 
-Run the bot script
+---
 
-🚀 Deploying with Railway
-You can deploy this bot easily using Railway:
+## ☁️ Deploying with Railway
 
-Create a new project on Railway and link your GitHub repository.
+1. Go to [Railway](https://railway.app) and create a new project  
+2. Link your GitHub repository  
+3. Add an environment variable `BOT_TOKEN`  
+4. Railway auto-installs dependencies and keeps your bot online 24/7
 
-Add your environment variable BOT_TOKEN in Railway’s dashboard under the project settings.
+**Optional:** Add a `requirements.txt`:
 
-Railway will automatically install dependencies based on your requirements.txt or via pip install commands.
-
-Railway will run your bot script and keep it online 24/7.
-
-Railway provides a hassle-free way to host your Discord bot without managing your own server.
-
-Optional: Create a requirements.txt file
-To make deployment easier, create a requirements.txt file in your project folder with these lines:
-
+```
 discord.py
 aiosqlite
+```
 
-Feel free to customize fish types or improve functionality as needed!
+---
 
-If you want help with Docker or advanced deployment setups, just ask!
+## 📫 Feedback
+
+Have ideas or feedback? DM me on Discord: `Klobow`  
+Let’s make **fishing in Discord** easy and fun for everyone!
+
+---
